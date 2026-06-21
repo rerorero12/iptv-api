@@ -15,6 +15,8 @@ on:
 jobs:
   push:
     runs-on: ${{ matrix.operating-system }}
+    permissions:
+      contents: write  # 🔑 关键：允许推送代码
     strategy:
       matrix:
         operating-system: [ 'ubuntu-latest' ]
